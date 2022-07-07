@@ -164,3 +164,22 @@ INNER JOIN departments AS d
 ON (de.dept_no = d.dept_no);
 
 --Backup Load --
+
+--Skill Drill 7.3.6 (1)
+SELECT di.emp_no,
+	di.first_name,
+	di.last_name,
+	di.dept_name
+INTO sales_info
+FROM dept_info as di
+WHERE di.dept_name='Sales';
+
+--Skill Drill 7.3.6 (2)
+SELECT di.emp_no,
+	di.first_name,
+	di.last_name,
+	di.dept_name
+INTO combo_info
+FROM dept_info as di
+WHERE di.dept_name IN('Sales','Development');
+--Backup Load 7.3.6--
